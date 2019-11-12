@@ -10,16 +10,34 @@
 
 <body>
   <div class="container">
-      <div class="card border-0 shadow my-5">
-           <div class="card-body p-5">
-  <h2 class="p-1">Shopping List</h2>
-    <input id="userinput" type="text" placeholder="Add a grocery item...">
-    <button id="enter" class="btn btn-dark">Enter</button>
-    <ul></ul>
-    <input type="button" class="btn btn-danger" value="Remove All" onclick="removeItem()">
-    </div>
+    <div class="card border-0 shadow my-5">
+      <div class="card-body p-5">
+        <script type="text/javascript">
+          var today = new Date();
+          var theTime = today.getHours();
+          var greeting;
+
+          if (theTime > 18) {
+            greeting = 'Good evening';
+          } else if (theTime > 12) {
+            greeting = 'Good afternoon';
+          } else if (theTime > 0) {
+            greeting = 'Good morning';
+          } else {
+            greeting = 'Welcome';
+          }
+
+          document.write(greeting);
+        </script>
+        <h2 class="p-1">Create Your Shopping List</h2>
+        <input id="userinput" type="text" placeholder="Add a grocery item...">
+        <button id="enter" class="btn btn-dark">Enter</button>
+        <ul></ul>
+        <input type="button" class="btn btn-danger" value="Remove All" onclick="removeItem()">
+      </div>
     </div>
   </div>
   <script type="text/javascript" src="script.js"></script>
 </body>
+
 </html>

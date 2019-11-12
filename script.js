@@ -1,9 +1,7 @@
 var enter = document.getElementById("enter");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
-var today = new Date();
-var theTime = today.getHours();
-var greeting;
+
 
 function inputLength(){
   return input.value.length;
@@ -41,16 +39,3 @@ function addListAfterKeypress(event){
 
 enter.addEventListener("click", addListAfterClick);
 input.addEventListener("keypress", addListAfterKeypress);
-
-// Displays time of day
-if (theTime > 18){
-  greeting = 'Good evening';
-} else if (theTime > 12) {
-  greeting = 'Good afternoon';
-} else if (theTime > 0) {
-  greeting = 'Good morning';
-} else {
-  greeting = 'Welcome';
-}
-
-document.write(greeting);
