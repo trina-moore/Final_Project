@@ -17,22 +17,23 @@
           var theTime = today.getHours();
           var greeting;
 
-          if (theTime > 18) {
-            greeting = 'Good evening';
+          if (theTime > 17) {
+            greeting = 'Good evening!';
           } else if (theTime > 12) {
-            greeting = 'Good afternoon';
+            greeting = 'Good afternoon!';
           } else if (theTime > 0) {
-            greeting = 'Good morning';
+            greeting = 'Good morning!';
           } else {
-            greeting = 'Welcome';
+            greeting = 'Welcome!';
           }
 
           document.write(greeting);
         </script>
         <h2 class="p-1">Create Your Shopping List</h2>
+        <p id="errormessage"></p>
         <input id="userinput" type="text" placeholder="Add a grocery item...">
         <button id="enter" class="btn btn-dark">Enter</button>
-        <ul></ul>
+        <ul class="p-2"></ul>
         <input type="button" class="btn btn-danger" value="Remove All" onclick="removeItem()">
       </div>
     </div>
