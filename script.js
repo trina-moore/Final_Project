@@ -37,7 +37,7 @@ function addListAfterClick() {
     if (inputLength() = 0) throw "Input is invalid";
   } catch (err) {
     error.innerHTML = "Input is invalid";
-  } finally {console.log ('end of try/catch');}
+  } finally {console.log ('inside finally block');}
   if (inputLength() > 0) {
       error.innerHTML = "";
     createListElement();
