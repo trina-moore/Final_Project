@@ -1,3 +1,10 @@
+/*
+JavaScript Final
+Author: Trina Moore
+Date: 12/9/19
+Filename: script.js
+*/
+
 var enter = document.getElementById("enter");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
@@ -25,17 +32,18 @@ function removeItem(itemid) {
 
 // adds list items after pressing enter button
 function addListAfterClick() {
-
   error.innerHTML = "";
   try {
-    if (inputLength() = 0) throw "input is invalid";
+    if (inputLength() = 0) throw "Input is invalid";
   } catch (err) {
     error.innerHTML = "Input is invalid";
-  }
+  } finally {console.log ('end of try/catch');}
   if (inputLength() > 0) {
+      error.innerHTML = "";
     createListElement();
   }
 }
+
 
 // adds list items after clicking enter key
 function addListAfterKeypress(event) {
